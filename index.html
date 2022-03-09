@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="VictorCisanganiTaskGrd5.css">
+    <title>General Knowlege Quiz</title>
+</head>
+
+<body>
+    <h1>General Knowlege Quiz</h1>
+
+    <form action="" id="startForm">
+        <h2>Tell Us About Yourself</h2>
+
+        <section class="nameInput1">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Firstname">
+            <p class="hidden" id="firstNameError">Please enter a valid firstname <br>(>1 letters)!</p>
+        </section>
+        <section class="nameInput2">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Lastname">
+            <p class="hidden" id="lastNameError">Please enter a valid lastname <br>(>1 letters)!</p>
+        </section>
+        <section class="emailInput">
+            <label for="email">Your Email</label>
+            <input type="text" name="email" id="email" placeholder="Email">
+            <p class="hidden" id="emailError">Please enter a valid email!</p>
+        </section>
+        <button type="submit" id="startButton">Start Quiz</button>
+    </form>
+
+    <form action="" id="question1" class="hiddenQuiz">
+        <section class="question">
+            <img src="flag1.jpg" alt="">
+            <p>Which country does this flag belong to? </p>
+            <span></span>
+            <div>
+                <input type="radio" id="japan" name="country" value="Japan">
+                <label for="japan">Japan</label>
+                <br>
+            </div>
+            <div>
+                <input type="radio" id="southKorea" name="country" value="South Korea">
+                <label for="southKorea">South Korea</label>
+                <br>
+            </div>
+            <div>
+                <input type="radio" id="philippines" name="country" value="Philippines">
+                <label for="philippines">Philippines</label>
+                <br>
+            </div>
+            <div>
+                <input type="radio" id="china" name="country" value="China">
+                <label for="china">China</label>
+                <br>
+            </div>
+            <p id="q1Error" class="hiddenQuiz">You must answer this question</p><br>
+            <button type="submit">Next Question</button>
+        </section>
+    </form>
+
+    <form action="" id="question2" class="hiddenQuiz">
+        <section class="question">
+            <img src="harrypotter.jpg" alt="">
+            <p>Which of these characters are from the Harry Potter series? <br>(You must get all correct.) </p>
+            <span></span>
+            <div>
+                <input type="checkbox" id="hermoine" name="harryPotter" value="Hermoine Granger">
+                <label for="hermoine">Hermoine Granger</label>
+                <br>
+            </div>
+            <div>
+                <input type="checkbox" id="volcano" name="harryPotter" value="Lord Volcano">
+                <label for="volcano">Lord Volcano</label>
+                <br>
+            </div>
+            <div>
+                <input type="checkbox" id="draco" name="harryPotter" value="Draco Malfoy">
+                <label for="draco">Draco Malfoy</label>
+                <br>
+            </div>
+            <p id="q2Error" class="hiddenQuiz">You must answer this question</p><br>
+            <button type="submit">Next Question</button>
+        </section>
+    </form>
+
+    <form action="" id="question3" class="hiddenQuiz">
+        <section class="question">
+            <img src="binary.jpg" alt="">
+            <p>What is the next number in the sequence below? <br>2, 4, 8, 16, 32, 64, ....</p>
+            <span></span>
+            <div>
+                <input type="text" id="nextNumber" placeholder="....">
+                <br>
+            </div>
+            <p id="q3Error" class="hiddenQuiz">You must answer this question</p><br>
+            <button type="submit">Next Question</button>
+        </section>
+    </form>
+
+    <form action="" id="question4" class="hiddenQuiz">
+        <section class="question">
+            <img src="river.jpg" alt="">
+            <p>Which one of these is the longest river in the world? </p>
+            <span></span>
+            <div>
+                <input type="radio" id="amazon" name="river" value="Amazon River">
+                <label for="amazon">Amazon River</label>
+                <br>
+            </div>
+            <div>
+                <input type="radio" id="yangtze" name="river" value="Yangtze River">
+                <label for="yangtze">Yangtze River</label>
+                <br>
+            </div>
+            <div>
+                <input type="radio" id="nile" name="river" value="Nile River">
+                <label for="nile">Nile River</label>
+                <br>
+            </div>
+            <p id="q4Error" class="hiddenQuiz">You must answer this question</p><br>
+
+            <button type="submit">Submit Quiz</button>
+        </section>
+    </form>
+
+    <form action="" id="results" class="hiddenQuiz">
+        <section class="question">
+            <img src="Good.jpg" alt="">
+            <h2>Nice Work!</h2>
+            <div>
+                <p>You got <span id="outOf"></span>/4 correct.</p>
+                <h2><span id="percent"></span>%</h2>
+            </div>
+            <div>
+                <h4>Correct Answers:</h4>
+                <p>Q1 Your answer: <span id="q1"></span><br><span class="correct">Correct answer: South Korea</span> </p>
+                <p>Q2 Your answer: <span id="q2"></span><br><span class="correct">Correct answer: Hermoine Granger & Draco Malfoy</span>
+                </p>
+                <p>Q3 Your answer: <span id="q3"></span><br><span class="correct">Correct answer: 128</span>
+                </p>
+                <p>Q4 Your answer: <span id="q4"></span><br><span class="correct">Correct answer: Nile River</span>
+                </p>
+            </div>
+            <a onclick="exit('index.html')"><button>Exit Quiz</button></a>
+        </section>
+    </form>
+    <div>
+        <a href="userGenerated.html"><button id="createOwn" >Creat Your Own Form</button></a>
+    </div>
+    <br>
+    <script src="VictorCisanganiTaskGrd5Old.js"></script>
+</body>
+
+</html>

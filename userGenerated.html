@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="VictorCisanganiTaskGrd5.css">
+    <title>User Generated Form</title>
+</head>
+
+<body>
+    <h1>User Generated Form</h1>
+    <div>
+        <a href="index.html" id="otherPage1"><button id="otherPage2">Take Our General Quiz</button></a>
+    </div>
+    <br>
+    <form action="" id="userChoice">
+        <section>
+            <h2>Create Your Form</h2>
+
+            <div>
+                <label for="userType">Choose a type for the input:</label>
+                <p></p>
+                <select name="chooseType" id="userType">
+                    <option value="">-Choose input type-</option>
+                    <option value="text">Text</option>
+                    <option value="radio">Radio</option>
+                    <option value="checkbox">Checkbox</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="userQuestion">Write your question below:</label>
+                <input type="text" id="userQuestion" class="textChoice">
+                <br>
+            </div>
+            <div>
+                <label for="userPoints">How many points does this question give:</label>
+                <input type="text" id="userPoints" class="textChoice">
+                <br>
+            </div>
+            <div>
+                <label for="goodAnswer">Write the answer:</label>
+                <label for="goodAnswer">(Use ID as answer for radio and checkboxes)</label>
+                <label for="goodAnswer">(Use '&' to seperate checkbox answers in order)</label>
+                <input type="text" id="goodAnswer" class="textChoice">
+                <br>
+            </div>
+            <div>
+                <label for="questionName">Give Question A Name:</label>
+                <input type="text" id="questionName" class="textChoice">
+                <br>
+            </div>
+            <div id="textIDAdd" class="hiddenQuiz">
+                <label for="questionIDText">Write Question ID:</label>
+                <input type="text" id="questionIDText" class="textChoice">
+                <br>
+            </div>
+            <div id="boxChoices" class="hiddenQuiz">
+                <br>
+                <p>Write 3 Options</p>
+                <label for="option1">Option 1:</label>
+                <input type="text" id="option1" class="textChoice">
+                <br>
+                <label for="input1">Write option 1 ID:</label>
+                <input type="text" id="input1" class="textChoice">
+                <br>
+                <label for="option2">Option 2:</label>
+                <input type="text" id="option2" class="textChoice">
+                <br>
+                <label for="input2">Write option 2 ID:</label>
+                <input type="text" id="input2" class="textChoice">
+                <br>
+                <label for="option3">Option 3:</label>
+                <input type="text" id="option3" class="textChoice">
+                <br>
+                <label for="input3">Write option 3 ID:</label>
+                <input type="text" id="input3" class="textChoice">
+                <br>
+            </div>
+            <div id="tryOrAdd">
+                <div><button id="addForm">Add Question</button></div>
+                <div><button id="tryQuiz">Try Quiz</button></div>
+            </div>
+        </section>
+    </form>
+    <form action="" id="finalForm" class="hiddenQuiz">
+        <div>
+            <img src="Good.jpg" alt="">
+            <h2>Submited!</h2>
+            <div>
+                <p>Your quiz has been successfully submited. Unanswered questions will give you 0 points<br>These are the results:</p>
+            </div>
+            <div>
+                <p>You got <span id="spanGot"></span>/<span id="spanOutOf"></span> points.</p>
+                <h2><span id="finalPercent"></span>%</h2>
+            </div>
+            <div>
+                <p>Correct answers: <br><span id="youDid2" class="correct"></span><br><br>You answered: <br><span id="youDid"></span></p>
+            </div>
+        </div>
+        <button type="submit">Make New Quiz</button>
+    </form>
+    <br>
+
+    <script src="VictorCisanganiTaskGrd5.js"></script>
+</body>
+
+</html>
